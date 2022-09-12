@@ -4,24 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./src/styles/styles.css" />
+    <script src="./src/js/index.js" type="text/javascript"></script>
+
     <title>Freelance</title>
   </head>
   <body>
     <!-- menu section -->
     <div class="menu-container">
-      <div>
+      <div class="menu-items-container">
         <div class="menu-logo">START BOOTSTRAP</div>
-        <div class="menu-item hidden-menu">PORTFOLIO</div>
-        <div class="menu-item hidden-menu">ABOUT</div>
-        <div class="menu-item hidden-menu">CONTACT</div>
+        <div class="menu-items" id="menu-items">
+          <div class="menu-item">PORTFOLIO</div>
+          <div class="menu-item">ABOUT</div>
+          <div class="menu-item">CONTACT</div>
+        </div>
       </div>
-      <div class="menu-items">
-        <div class="menu-item">PORTFOLIO</div>
-        <div class="menu-item">ABOUT</div>
-        <div class="menu-item">CONTACT</div>
-      </div>
-      <div class="menu-btn">Menu</div>
+      <div class="menu-btn" id="menu-btn">Menu</div>
     </div>
     <!-- hero section -->
 
@@ -129,5 +128,8 @@
         </div>
       </div>
     </div>
+
+    <!-- popup -->
+    <div class="popup"></div>
   </body>
 </html>
