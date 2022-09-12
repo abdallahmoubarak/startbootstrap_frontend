@@ -72,6 +72,7 @@
   font-size: 2.6rem;
   font-weight: bold;
   padding: 3rem 1rem;
+  text-align: center;
 }
 
 .hero-img {
@@ -83,6 +84,8 @@
 
 .line-star {
   padding: 1rem;
+  max-width: 22rem;
+  margin: auto;
 }
 
 /* PORTFOLIO section */
@@ -130,6 +133,7 @@
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.8rem;
+  margin: 1rem auto;
 }
 
 .btn-container {
@@ -170,12 +174,13 @@ input {
 }
 textarea {
   font-size: 1.6rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   min-width: 100%;
   border: none;
   border-bottom: 1px solid gray;
   outline: none;
   margin: 1rem;
+  max-width: 100%;
 }
 .send-btn {
   background: #1abc9c;
@@ -196,9 +201,8 @@ textarea {
 .footer-container {
   background: #2c3e50;
   color: white;
-  padding: 3rem;
+  padding: 3rem calc(1rem + 2vw);
   text-align: center;
-  padding: 3rem;
   text-align: center;
   display: flex;
   align-items: center;
