@@ -84,3 +84,13 @@
 .line-star {
   padding: 1rem;
 }
+
+/* PORTFOLIO section */
+
+.protfolio-container {
+  color: #2c3e50;
+  font-size: 2.6rem;
+  font-weight: bold;
+  padding: 3rem 1rem;
+  text-align: center;
+}
