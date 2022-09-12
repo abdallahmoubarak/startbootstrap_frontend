@@ -148,3 +148,44 @@
   -o-border-radius: 0.6rem;
   cursor: pointer;
 }
+/* CONTACT ME section */
+
+.contact-container {
+  color: #2c3e50;
+  font-size: 2.6rem;
+  font-weight: bold;
+  padding: 3rem;
+  text-align: center;
+}
+
+input {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  margin: 1rem;
+}
+textarea {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  min-width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  margin: 1rem;
+}
+.send-btn {
+  background: #1abc9c;
+  font-size: 1.2rem;
+  color: white;
+  padding: 1.6rem;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  cursor: pointer;
+  border: none;
+}
