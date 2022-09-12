@@ -112,3 +112,39 @@
   -ms-border-radius: 0.6rem;
   -o-border-radius: 0.6rem;
 }
+
+/* about section */
+
+.about-container {
+  background: #1abc9c;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+}
+.about-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+.about-paragraph {
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.btn-container {
+  padding: 2rem;
+}
+
+.download-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  border: 2px solid white;
+  background: #1abc9c;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  cursor: pointer;
+}
