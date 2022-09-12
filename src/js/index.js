@@ -19,11 +19,37 @@ window.addEventListener("DOMContentLoaded", () => {
   const number = document.getElementById("number");
   const txtMsg = document.getElementById("txt-msg");
   const msg = document.getElementById("msg");
+  var regex = /^[\w\.\-]+@([\w\-]+\.)+[a-zA-Z]+$/;
 
   sendBtn.addEventListener("click", () => {
-    console.log(name.value.length);
+    msg.innerHTML = "";
+    console.log(name.value.length || !name.value);
     if (name.value.length < 5) {
-      msg.innerHTML = "*Your name is not correct";
+      msg.innerHTML = "*Your name is not valid";
+    }
+    if (
+      //   regex.test(mail.value) &
+      (mail.value.indexOf("@") < 2) &
+        (mail.value.length - mail.value.indexOf("@") < 5) ||
+      !mail.value
+    ) {
+      alert(mail.value.length - mail.value.indexOf("@"));
+      msg.innerHTML += "<br/>*Your mail is not valid";
+    }
+    if (
+      !(
+        (number.value.startsWith("+96171") ||
+          number.value.startsWith("+96170") ||
+          number.value.startsWith("+96176")) &
+          (number.value.length == 12) ||
+        number.value.startsWith("+9613") & (number.value.length == 11)
+      )
+    ) {
+      msg.innerHTML += "<br/>*Your number is not valid";
+    }
+
+    if (txtMsg.value.length <= 100) {
+      msg.innerHTML += "<br/>*Your message should be more than 100 characters";
     }
   });
 
