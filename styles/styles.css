@@ -94,3 +94,21 @@
   padding: 3rem 1rem;
   text-align: center;
 }
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0rem calc(1vw + 1rem);
+  gap: 2rem 1rem;
+}
+.card {
+  width: 20rem;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
