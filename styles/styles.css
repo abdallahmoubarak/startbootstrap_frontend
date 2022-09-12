@@ -111,6 +111,7 @@
   -moz-border-radius: 0.6rem;
   -ms-border-radius: 0.6rem;
   -o-border-radius: 0.6rem;
+  cursor: pointer;
 }
 
 /* about section */
@@ -188,4 +189,57 @@ textarea {
   -o-border-radius: 0.6rem;
   cursor: pointer;
   border: none;
+}
+
+/* footer section */
+
+.footer-container {
+  background: #2c3e50;
+  color: white;
+  padding: 3rem;
+  text-align: center;
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-column {
+  flex: 1 1 12rem;
+}
+
+.footer-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 2rem;
+  white-space: nowrap;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+  justify-content: center;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+.link {
+  color: #1abc9c;
+  text-decoration: underline;
+  cursor: pointer;
 }
