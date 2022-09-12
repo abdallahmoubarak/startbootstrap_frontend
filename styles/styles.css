@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
 }
 
 .menu-logo {
@@ -98,15 +99,17 @@
   text-align: center;
 }
 .cards-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0rem calc(1vw + 1rem);
+  padding: 0rem calc(2vw + 1rem);
   gap: 2rem 1rem;
 }
 .card {
-  width: 20rem;
+  position: relative;
+  max-width: 20rem;
   height: 14rem;
   overflow: hidden;
   border-radius: 0.6rem;
@@ -115,6 +118,36 @@
   -ms-border-radius: 0.6rem;
   -o-border-radius: 0.6rem;
   cursor: pointer;
+}
+
+.card::before {
+  position: absolute;
+  content: "+";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1abc9cc9;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  display: none;
+}
+
+.card:hover:before {
+  display: flex;
+}
+
+@media screen and (min-width: 90rem) {
+  .cards-container {
+    padding: 0rem calc(7vw + 1rem);
+  }
+  .card {
+    max-width: 26rem;
+    height: 19rem;
+  }
 }
 
 /* about section */
@@ -129,11 +162,18 @@
   font-size: 2.6rem;
   font-weight: bold;
 }
+.about-par-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem 3rem;
+}
 .about-paragraph {
+  flex: 0 0 30rem;
   text-align: left;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  margin: 1rem auto;
 }
 
 .btn-container {
@@ -241,6 +281,10 @@ textarea {
   -moz-border-radius: 2rem;
   -ms-border-radius: 2rem;
   -o-border-radius: 2rem;
+  cursor: pointer;
+}
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.404);
 }
 .link {
   color: #1abc9c;
