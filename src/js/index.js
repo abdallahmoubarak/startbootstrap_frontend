@@ -11,6 +11,22 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // validation
+
+  const sendBtn = document.getElementById("send-btn");
+  const name = document.getElementById("name");
+  const mail = document.getElementById("mail");
+  const number = document.getElementById("number");
+  const txtMsg = document.getElementById("txt-msg");
+  const msg = document.getElementById("msg");
+
+  sendBtn.addEventListener("click", () => {
+    console.log(name.value.length);
+    if (name.value.length < 5) {
+      msg.innerHTML = "*Your name is not correct";
+    }
+  });
+
   //   popup
   const cards = document.getElementsByClassName("card");
   const closeBtn = document.getElementById("popup-close-btn");
