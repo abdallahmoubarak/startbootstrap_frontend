@@ -2,4 +2,56 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.menu-container {
+  position: sticky;
+  top: 0;
+  background: #2c3e50;
+  color: white;
+  font-size: 1.6rem;
+  padding: 1.6rem calc(1rem + 2vw);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo {
+  font-size: 2rem;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+.menu-item {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.menu-item:hover {
+  color: #1abc9c;
+}
+.menu-btn {
+  background: #1abc9c;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 55rem) {
+  .menu-items {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
 }
