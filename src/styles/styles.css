@@ -305,3 +305,65 @@ textarea {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* pop up */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  display: none;
+}
+.popup-title {
+  font-size: 3rem;
+}
+
+.popup-card {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.popup-btn {
+  background-color: #1abc9c;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+}
+.popup-close {
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+  font-size: 2rem;
+  color: rgb(32, 32, 32);
+}
+
+.popup-img {
+  width: 30rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
+}
