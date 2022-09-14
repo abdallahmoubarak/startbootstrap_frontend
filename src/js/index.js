@@ -51,14 +51,21 @@ window.addEventListener("DOMContentLoaded", () => {
     if (txtMsg.value.length <= 100) {
       msg.innerHTML += "<br/>*Your message should be more than 100 characters";
     }
-    fetch(`${serverDir}/apis/send.php`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+
+    if (msg.innerHTML == "") {
+      var formData = new FormData();
+      formData.append("name", name.value);
+      formData.append("mail", mail.value);
+      formData.append("number", number.value);
+      formData.append("message", txtMsg.value);
+
+      fetch(`${serverDir}/apis/send.php`, {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
   });
 
   //   popup
@@ -80,9 +87,11 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   //  creating the table
-
+  const table = document.getElementById("table");
   const tableHead =
     "<tr><th>Name</th><th>Number</th><th>Mail</th><th>Messages</th></tr>";
+
+  table.innerHTML += tableHead;
 
   fetch(`${serverDir}/apis/messages.php`, {
     method: "GET",
