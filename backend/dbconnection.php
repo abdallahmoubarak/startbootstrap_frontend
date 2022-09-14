@@ -11,9 +11,6 @@ $db_name = "messages_db";
 
 $mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
 
-
-
-
 if (!$mysqli)
 {
   die('Could not connect: ' . mysql_error());

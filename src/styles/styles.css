@@ -381,3 +381,24 @@ textarea:focus {
   -ms-border-radius: 0.8rem;
   -o-border-radius: 0.8rem;
 }
+
+/* table */
+
+table {
+  width: 100%;
+  padding: 2rem;
+}
+tr {
+  background: #1abc9c;
+  color: white;
+}
+th {
+  padding: 1rem 2rem;
+}
+
+td {
+  background-color: white;
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+  padding: 1rem 2rem;
+}

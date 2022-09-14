@@ -85,20 +85,4 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  //  creating the table
-  const table = document.getElementById("table");
-  const tableHead =
-    "<tr><th>Name</th><th>Number</th><th>Mail</th><th>Messages</th></tr>";
-
-  table.innerHTML += tableHead;
-
-  fetch(`${serverDir}/apis/messages.php`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data));
 });
