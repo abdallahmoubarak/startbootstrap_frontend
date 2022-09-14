@@ -1,5 +1,5 @@
 <?php
-include('../backend/dbconnection.php')
+include('../backend/dbconnection.php');
 
 
 // $name = $_POST["name"];
@@ -14,7 +14,7 @@ $message = "lsdkjf sdlkfjlksdfj lksdjfa";
 
 
 $sql = "INSERT INTO messages(user_name, user_mail,user_number,message) VALUE (?, ?,?,?)";
-$query =$mysqli->prepare($sql)
+$query =$mysqli->prepare($sql);
 
 $query->bind_param("ssss", $name, $mail, $number, $message);
 $query->execute();

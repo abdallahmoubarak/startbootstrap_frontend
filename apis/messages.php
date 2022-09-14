@@ -1,7 +1,17 @@
 <?php
 
-$result = array( "message" => 'hello world' );
+include('../backend/dbconnection.php');
 
-echo json_encode($result);
+$query = $mysqli->prepare("SELECT * FROM messages");
+$query->execute();
+$array = $query->get_result();
 
+$response = [];
+
+while($a = $array->fetch_assoc()){
+    $response[] = $a;
+}
+
+
+echo json_encode($response);
 ?>
