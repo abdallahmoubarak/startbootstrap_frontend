@@ -1,3 +1,4 @@
+const serverDir = "http://localhost/github/startbootstrap_frontend";
 window.addEventListener("DOMContentLoaded", () => {
   //   menu
   const menuBtn = document.getElementById("menu-btn");
@@ -33,7 +34,6 @@ window.addEventListener("DOMContentLoaded", () => {
         (mail.value.length - mail.value.indexOf("@") < 5) ||
       !mail.value
     ) {
-      alert(mail.value.length - mail.value.indexOf("@"));
       msg.innerHTML += "<br/>*Your mail is not valid";
     }
     if (
@@ -51,6 +51,14 @@ window.addEventListener("DOMContentLoaded", () => {
     if (txtMsg.value.length <= 100) {
       msg.innerHTML += "<br/>*Your message should be more than 100 characters";
     }
+    fetch(`${serverDir}/apis/send.php`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   });
 
   //   popup
